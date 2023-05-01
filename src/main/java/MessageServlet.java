@@ -6,12 +6,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.History;
+import model.AbstractHistory;
 
 @WebServlet(urlPatterns = { "/message", "/clear" })
 public class MessageServlet extends HttpServlet {
 	@Inject
-	private History history;
+	// private History history;
+	private AbstractHistory history;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
